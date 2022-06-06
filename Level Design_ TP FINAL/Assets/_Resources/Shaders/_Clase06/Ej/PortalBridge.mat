@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PortalBridge
+  m_Shader: {fileID: 4800000, guid: e705a9ed593b81842b60f436b1c54eb2, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AmplitudeLine1: 2.5
+    - _AmplitudeLine2: 2.5
+    - _AmplitudeLine3: 2.5
+    - _Border: 0.95
+    - _Border1: 0.9
+    - _Line: 0.52
+    - _Line1: 0.55792063
+    - _Line2: 0.55
+    - _Line3: 0.5579206
+    - _MovLine: 1
+    - _MovLine1: 1
+    - _MovLine2: 1
+    - _MovLine3: 1
+    - _OffsetLine1: 0
+    - _OffsetLine2: 1
+    - _OffsetLine3a: 2
+    - _TilingLine1: 25
+    - _TilingLine2: 25
+    - _TilingLine3: 25
+    - __dirty: 0
+    m_Colors: []
+  m_BuildTextureStacks: []
