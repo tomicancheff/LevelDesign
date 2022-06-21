@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LevelDesignTest.unity
+    path: Assets/_Resources/Scenes/Tutorial.unity
     guid: 3f61fbc736b4abd4cb538ebf18fd74c8
+  - enabled: 1
+    path: Assets/_Resources/Maxifolder/Level1.unity
+    guid: b7a57f92430afb5438469e4e11ae431b
+  - enabled: 1
+    path: Assets/_Resources/Maxifolder/Level2.unity
+    guid: 6224c3c8a7daddf47a98acc372991cd7
   m_configObjects: {}
