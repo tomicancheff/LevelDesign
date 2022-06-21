@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6816590129777657477}
   - component: {fileID: 4515438191977166171}
   - component: {fileID: 5440929036728292698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shelf Grate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,6 +56,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -67,6 +69,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -79,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &4515438191977166171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -118,7 +122,7 @@ GameObject:
   - component: {fileID: 6012261076398810688}
   - component: {fileID: 5452055533192816562}
   - component: {fileID: 5952673630022882868}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LP_shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,6 +165,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -172,6 +178,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -184,6 +191,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &5452055533192816562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -219,7 +227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6935459031938432818}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shelves Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
