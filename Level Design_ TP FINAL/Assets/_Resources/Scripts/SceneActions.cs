@@ -10,12 +10,18 @@ public enum LevelSelector
     Level1,
     Level2
 }
-
-[RequireComponent(typeof(Button))]
-public class ButtonActions : MonoBehaviour
+public class SceneActions : MonoBehaviour
 {
-    [SerializeField] private Transform loadingScreenGo;
+    private Transform _loadingScreenGo;
     
+    [Header("LoadScene")][Space(5)][SerializeField]
+    private string sceneToLoadName = "Tutorial";
+
+    private void Start()
+    {
+        _loadingScreenGo = FindObjectOfType<LoadingController>(true).gameObject.transform;
+    }
+
     public void QuitApplication()
     {
 #if UNITY_EDITOR
@@ -42,8 +48,8 @@ public class ButtonActions : MonoBehaviour
 
     private IEnumerator StartLoad(string sceneToLoad)
     {
-        loadingScreenGo.gameObject.SetActive(true);
-        var slider = loadingScreenGo.gameObject.GetComponentInChildren<Slider>();
+        _loadingScreenGo.gameObject.SetActive(true);
+        var slider = _loadingScreenGo.gameObject.GetComponentInChildren<Slider>();
         yield return StartCoroutine(FadeLoadingScreen(1, 1));
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneToLoad);
         while (!operation.isDone)
@@ -52,12 +58,12 @@ public class ButtonActions : MonoBehaviour
             yield return null;
         }
         yield return StartCoroutine(FadeLoadingScreen(0, 1));
-        loadingScreenGo.gameObject.SetActive(false);
+        _loadingScreenGo.gameObject.SetActive(false);
     }
 
     private IEnumerator FadeLoadingScreen(float targetValue, float duration)
     {
-        var canvasGroup = loadingScreenGo.GetComponent<CanvasGroup>();
+        var canvasGroup = _loadingScreenGo.GetComponent<CanvasGroup>();
         float startValue = canvasGroup.alpha;
         float time = 0;
         while (time < duration)
@@ -67,5 +73,10 @@ public class ButtonActions : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = targetValue;
+    }
+
+    public void LoadScene()
+    {
+        StartCoroutine(StartLoad(sceneToLoadName));
     }
 }

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1266070958588280149}
   - component: {fileID: 1294425633297563193}
   - component: {fileID: 1284335813219129761}
-  - component: {fileID: 1261202852871294978}
   - component: {fileID: 1261202852871295485}
+  - component: {fileID: 1261202852871294978}
+  - component: {fileID: 2320926003601964122}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -83,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1261202852871294978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262446294516319641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acabec85e0cbe3a46858b06e98fefa1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneToLoad: 2
 --- !u!65 &1261202852871295485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109,3 +97,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6871605, y: 0.58575726, z: 1.7906609}
   m_Center: {x: 0.0011196136, y: 0.29287863, z: 0.12667274}
+--- !u!114 &1261202852871294978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262446294516319641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acabec85e0cbe3a46858b06e98fefa1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2320926003601964122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262446294516319641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c26dbaee265ee47b3d01becfec1498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreenGo: {fileID: 0}
+  sceneToLoadName: Tutorial
