@@ -1357,6 +1357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6404381672615271782}
   - component: {fileID: 7233966211580025131}
+  - component: {fileID: 4582430665187891428}
   m_Layer: 0
   m_Name: AlienC_Pr
   m_TagString: Untagged
@@ -1393,6 +1394,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7552948, y: 1.7983747, z: 0.15956585}
   m_Center: {x: 0.01, y: 0.77, z: -0.01}
+--- !u!95 &4582430665187891428
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6028982480729606108}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: c4f598dce2fd5744490725ee58c6b263, type: 3}
+  m_Controller: {fileID: 9100000, guid: 747a3a12bd31d5947bc63936b01b7945, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6131621454870654559
 GameObject:
   m_ObjectHideFlags: 0
