@@ -38,7 +38,15 @@ public class PlayerStatsUpdater : MonoBehaviour
             //DamageTakenVFX();
             HealthBarUpdate(_playerHealth.CurrentHealth, _playerHealth.GetRatio);
         };
+        _playerHealth.OnGained += delegate
+        {
+            HealthBarUpdate(_playerHealth.CurrentHealth, _playerHealth.GetRatio);
+        };
         _playerAmmo.OnConsumed += delegate
+        {
+            AmmoCountUpdate(_playerAmmo.CurrentAmmo);
+        };
+        _playerAmmo.OnGained += delegate
         {
             AmmoCountUpdate(_playerAmmo.CurrentAmmo);
         };
@@ -51,6 +59,6 @@ public class PlayerStatsUpdater : MonoBehaviour
     }
     private void AmmoCountUpdate(float currAmmo)
     {
-        healthText.text = $"{currAmmo} / {_playerMaxAmmo}";
+        ammoText.text = $"{currAmmo} / {_playerMaxAmmo}";
     }
 }
