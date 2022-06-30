@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262446294516319641}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30.08012, y: -3.9999719, z: -61.654}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -121,5 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c26dbaee265ee47b3d01becfec1498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreenGo: {fileID: 0}
-  sceneToLoadName: Tutorial
+  sceneToLoadName: Level1
