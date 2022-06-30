@@ -32,7 +32,6 @@ public class EnemyAttack : MonoBehaviour
         var healthDamage = other.GetComponent<Health>();
         _animator.SetTrigger(Attack1);
         healthDamage.TakeDamage(_damage);
-        print(healthDamage.CurrentHealth);
         _sw.Restart();
     }
 }
