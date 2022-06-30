@@ -16,10 +16,14 @@ public class PursuitAI : MonoBehaviour
     private Transform _target;
     private Rigidbody _rb;
     private Vector3 _moveDirection;
+    private Animator _animator;
+    
+    private static readonly int Walking = Animator.StringToHash("Walking");
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -32,7 +36,7 @@ public class PursuitAI : MonoBehaviour
         }
         else
         {
-            //_animator.SetBool("Walking", false);
+            _animator.SetBool(Walking, false);
         }
     }
 
@@ -44,12 +48,12 @@ public class PursuitAI : MonoBehaviour
             _moveDirection = (_target.position - transform.position).normalized * _speed; 
             _moveDirection.y = _rb.velocity.y;
             transform.LookAt(_target);
-            //_animator.SetBool("Walking", true);
+            _animator.SetBool(Walking, true);
             _rb.velocity = _moveDirection;
         }
         else
         {
-            //_animator.SetBool("Walking", false);
+            _animator.SetBool(Walking, false);
             _rb.velocity = Vector3.zero;
         }
     }
@@ -58,7 +62,7 @@ public class PursuitAI : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, _moveDirection, Vector3.Distance(transform.position, _target.position), _obstacle))
         {
-            //_animator.SetBool("Walking", false);
+            _animator.SetBool(Walking, false);
             return false;
         }
         return true;

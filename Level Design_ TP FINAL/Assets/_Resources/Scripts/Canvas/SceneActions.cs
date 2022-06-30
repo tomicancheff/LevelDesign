@@ -12,14 +12,14 @@ public enum LevelSelector
 }
 public class SceneActions : MonoBehaviour
 {
-    private Transform _loadingScreenGo;
+    private GameObject _loadingScreenGo;
     
     [Header("LoadScene")][Space(5)][SerializeField]
     private string sceneToLoadName = "Tutorial";
 
     private void Start()
     {
-        _loadingScreenGo = FindObjectOfType<LoadingController>(true).gameObject.transform;
+        _loadingScreenGo = FindObjectOfType<LoadingController>(true).gameObject;
     }
 
     public void QuitApplication()
@@ -48,8 +48,8 @@ public class SceneActions : MonoBehaviour
 
     private IEnumerator StartLoad(string sceneToLoad)
     {
-        _loadingScreenGo.gameObject.SetActive(true);
-        var slider = _loadingScreenGo.gameObject.GetComponentInChildren<Slider>();
+        _loadingScreenGo.SetActive(true);
+        var slider = _loadingScreenGo.GetComponentInChildren<Slider>();
         yield return StartCoroutine(FadeLoadingScreen(1, 1));
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneToLoad);
         while (!operation.isDone)
@@ -58,7 +58,7 @@ public class SceneActions : MonoBehaviour
             yield return null;
         }
         yield return StartCoroutine(FadeLoadingScreen(0, 1));
-        _loadingScreenGo.gameObject.SetActive(false);
+        _loadingScreenGo.SetActive(false);
     }
 
     private IEnumerator FadeLoadingScreen(float targetValue, float duration)

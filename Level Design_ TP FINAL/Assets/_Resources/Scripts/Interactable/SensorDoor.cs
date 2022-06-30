@@ -22,7 +22,6 @@ public class SensorDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            print("change in");
             ChangeState();
         }
     }
@@ -31,7 +30,6 @@ public class SensorDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            print("change out");
             ChangeState();
         }
     }
