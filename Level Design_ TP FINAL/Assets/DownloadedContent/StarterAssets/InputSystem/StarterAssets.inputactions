@@ -39,7 +39,7 @@
                 },
                 {
                     "name": "Aim",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "7a10e9ab-86e0-46f2-8c56-7be93245c2df",
                     "expectedControlType": "Button",
                     "processors": "",

@@ -11,6 +11,9 @@ namespace StarterAssets
 		public Vector2 move;
 		public Vector2 look;
 		public bool jump;
+		public bool shoot;
+		public bool aim;
+		public bool reload;
 		public bool sprint;
 
 		[Header("Movement Settings")]
@@ -43,6 +46,21 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnShoot(InputValue button)
+        {
+			ShootInput(button.isPressed);
+        }
+
+		public void OnReload(InputValue button)
+		{
+			ReloadInput(button.isPressed);
+		}
+
+		public void OnAim(InputValue button)
+        {
+			AimInput(button.isPressed);
+        }
 #endif
 
 
@@ -64,6 +82,21 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		public void ShootInput (bool newShootState)
+        {
+			shoot = newShootState;
+        }
+
+		public void ReloadInput ( bool newReload)
+        {
+			reload= newReload;
+        }
+
+		public void AimInput(bool newAim)
+		{
+			aim = newAim;
 		}
 
 		// private void OnApplicationFocus(bool hasFocus)
