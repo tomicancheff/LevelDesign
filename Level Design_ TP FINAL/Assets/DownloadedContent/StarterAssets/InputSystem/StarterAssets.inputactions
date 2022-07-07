@@ -47,7 +47,7 @@
                 },
                 {
                     "name": "Shoot",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "1bbf1486-cc47-4555-9a31-31aaaa8f28ae",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -57,6 +57,14 @@
                     "name": "Reload",
                     "type": "Button",
                     "id": "3791aded-a941-4368-b385-161c9c194598",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "9b37ec19-c66d-4511-9898-9a61a2285b25",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -253,7 +261,7 @@
                 {
                     "name": "",
                     "id": "e823ec5d-f44e-4c2d-911b-c4a239ac9e13",
-                    "path": "<XInputController>/leftTrigger",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -264,7 +272,7 @@
                 {
                     "name": "",
                     "id": "1326ecd5-a910-4bde-a5b5-9402ebadbe52",
-                    "path": "<Mouse>/middleButton",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
@@ -278,7 +286,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Xbox Controller",
+                    "groups": "Gamepad",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -297,11 +305,44 @@
                 {
                     "name": "",
                     "id": "6d3e13bf-27e8-4dba-9db3-486f5ba39abc",
-                    "path": "<XInputController>/buttonWest",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "016639cf-2b82-45ad-8927-7f07a3f34792",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "535b590f-b718-4372-add0-b65d5c8b2206",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50c6d8ad-db71-4092-b912-b16d4ba40921",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

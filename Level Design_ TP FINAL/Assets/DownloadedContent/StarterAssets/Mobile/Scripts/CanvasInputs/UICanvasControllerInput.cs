@@ -27,7 +27,6 @@ namespace StarterAssets
         {
             starterAssetsInputs.SprintInput(virtualSprintState);
         }
-        
     }
 
 }

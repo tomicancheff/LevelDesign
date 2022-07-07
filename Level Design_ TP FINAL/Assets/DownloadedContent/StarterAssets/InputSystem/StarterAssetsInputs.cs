@@ -15,6 +15,7 @@ namespace StarterAssets
 		public bool aim;
 		public bool reload;
 		public bool sprint;
+		public bool pause;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -47,20 +48,25 @@ namespace StarterAssets
 			SprintInput(value.isPressed);
 		}
 
-		public void OnShoot(InputValue button)
+		public void OnShoot(InputValue value)
         {
-			ShootInput(button.isPressed);
+			ShootInput(value.isPressed);
         }
 
-		public void OnReload(InputValue button)
+		public void OnReload(InputValue value)
 		{
-			ReloadInput(button.isPressed);
+			ReloadInput(value.isPressed);
 		}
 
-		public void OnAim(InputValue button)
+		public void OnAim(InputValue value)
         {
-			AimInput(button.isPressed);
+			AimInput(value.isPressed);
         }
+		
+		public void OnPause(InputValue value)
+		{
+			PauseInput(value.isPressed);
+		}
 #endif
 
 
@@ -89,14 +95,20 @@ namespace StarterAssets
 			shoot = newShootState;
         }
 
-		public void ReloadInput ( bool newReload)
+		public void ReloadInput (bool newReloadState)
         {
-			reload= newReload;
+			reload = newReloadState;
         }
 
-		public void AimInput(bool newAim)
+		public void AimInput(bool newAimState)
 		{
-			aim = newAim;
+			aim = newAimState;
+		}
+		
+		public void PauseInput(bool newAimState)
+		{
+			SetCursorState(pause);
+			pause = newAimState;
 		}
 
 		// private void OnApplicationFocus(bool hasFocus)

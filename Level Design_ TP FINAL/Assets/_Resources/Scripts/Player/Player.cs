@@ -22,8 +22,14 @@ public class Player : MonoBehaviour
     
     public Health Health { get; private set; }
     public Ammo Ammo { get; private set; }
+    public ThirdPersonController ThirdPersonController { get; private set; }
+    public StarterAssetsInputs Inputs { get; private set; }
+
+    public Transform ShootingPoint => shootingPoint;
 
     private PlayerStart _playerStart;
+
+    [SerializeField] private Transform shootingPoint;
 
     private void Awake()
     {
@@ -31,6 +37,8 @@ public class Player : MonoBehaviour
         _playerStart = FindObjectOfType<PlayerStart>();
         Health = GetComponent<Health>();
         Ammo = GetComponent<Ammo>();
+        ThirdPersonController = GetComponent<ThirdPersonController>();
+        Inputs = GetComponent<StarterAssetsInputs>();
         Health.OnDeath += OnDeathHandler;
     }
 
