@@ -63,9 +63,9 @@ namespace StarterAssets
 			AimInput(value.isPressed);
         }
 		
-		public void OnPause(InputValue value)
+		public void OnPause()
 		{
-			PauseInput(value.isPressed);
+			PauseInput();
 		}
 #endif
 
@@ -105,10 +105,10 @@ namespace StarterAssets
 			aim = newAimState;
 		}
 		
-		public void PauseInput(bool newAimState)
+		public void PauseInput()
 		{
+			pause = !pause;
 			SetCursorState(pause);
-			pause = newAimState;
 		}
 
 		// private void OnApplicationFocus(bool hasFocus)

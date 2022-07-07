@@ -30,8 +30,7 @@ public class SimpleProjectile : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            
-            if (other.GetComponent<Enemy>().Health != null)
+            if (other.GetComponent<Enemy>() != null)
             {
                 other.GetComponent<Enemy>().Health.TakeDamage(_damage);
             }

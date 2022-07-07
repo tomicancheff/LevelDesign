@@ -55,7 +55,6 @@ public class PlayerWeaponController : MonoBehaviour
     private void Reload()
     {
         if (!_player.Inputs.reload) return;
-        print("Reloading");
         _player.Inputs.reload = false;
         Invoke(nameof(FullLoadAmmo),weaponReloadTime);
     }
