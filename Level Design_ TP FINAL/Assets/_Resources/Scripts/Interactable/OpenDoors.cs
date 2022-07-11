@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class OpenDoors : MonoBehaviour
 {
-    [SerializeField] private GameObject door1;
+    [SerializeField] private GameObject door1;  
     
     private AudioSource _audioSource;
     
@@ -17,7 +17,7 @@ public class OpenDoors : MonoBehaviour
         {
             _audioSource.Play();
             door1.SetActive(false);
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, 0.1f);         
         }
     }
 }
