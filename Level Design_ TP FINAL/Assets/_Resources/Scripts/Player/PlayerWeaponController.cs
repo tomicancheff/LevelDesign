@@ -7,10 +7,12 @@ public class PlayerWeaponController : MonoBehaviour
     private Player _player;
     private Vector3 _shootingPoint;
     private float _lastProjectileShot;
+    [SerializeField] private ParticleSystem shootParticle;
 
     [Header("Weapon Stats")] [Space(5)] 
     [SerializeField] private float weaponFireRate = 0.3f;
     [SerializeField] private float weaponReloadTime = 0.3f;
+
     
     [Header("Bullet Stats")][Space(5)]
     [SerializeField] private SimpleProjectile bullet;
@@ -41,10 +43,11 @@ public class PlayerWeaponController : MonoBehaviour
         {
             _shootingPoint = _player.ShootingPoint.position;
             
-            var projectile = Instantiate(bullet, _shootingPoint, transform.rotation);
+            var projectile = Instantiate(bullet, _shootingPoint, transform.rotation);          
             projectile.SetUp(bulletSpeed,bulletDamage,bulletLifespan,_shootingPoint,transform.forward);
             _player.Ammo.ConsumeAmmo(1f);
             _lastProjectileShot = weaponFireRate;
+            
         }
         else
         {
