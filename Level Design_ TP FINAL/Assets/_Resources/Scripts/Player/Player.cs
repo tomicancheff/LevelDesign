@@ -1,6 +1,7 @@
 using System.Collections;
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -28,18 +29,27 @@ public class Player : MonoBehaviour
     public Transform ShootingPoint => shootingPoint;
 
     private PlayerStart _playerStart;
+    private CanvasManager _canvasManager;
 
     [SerializeField] private Transform shootingPoint;
 
     private void Awake()
     {
         MakeSingleton();
-        _playerStart = FindObjectOfType<PlayerStart>();
         Health = GetComponent<Health>();
         Ammo = GetComponent<Ammo>();
         ThirdPersonController = GetComponent<ThirdPersonController>();
         Inputs = GetComponent<StarterAssetsInputs>();
         Health.OnDeath += OnDeathHandler;
+        SceneManager.activeSceneChanged += OnSceneChange;
+        Inputs.OnInputPause += PauseInputHandler;
+    }
+
+    private void OnSceneChange(Scene arg0, Scene arg1)
+    {
+        _playerStart = FindObjectOfType<PlayerStart>();
+        _canvasManager = FindObjectOfType<CanvasManager>();
+        Inputs.pause = false;
     }
 
     private void OnDeathHandler()
@@ -63,5 +73,10 @@ public class Player : MonoBehaviour
         playerTransform.rotation = pos.rotation;
         yield return new WaitForSeconds(0.15f);
         charCont.enabled = true;
+    }
+
+    private void PauseInputHandler()
+    {
+        _canvasManager.SwitchCanvas(Inputs.pause ? CanvasType.PauseScreen : CanvasType.GameUI);
     }
 }

@@ -34,6 +34,17 @@ public class CanvasManager : Singleton<CanvasManager>
         {
             desiredCanvasController.gameObject.SetActive(true);
             _lastActiveCanvas = desiredCanvasController;
+            if (desiredCanvasType == CanvasType.GameUI)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Time.timeScale = 1f;
+            }
+            
+            if (desiredCanvasType == CanvasType.PauseScreen)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Time.timeScale = 0f;
+            }
         }
         else
             Debug.LogWarning("The desired canvas was not found");

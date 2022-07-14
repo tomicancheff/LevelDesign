@@ -48,6 +48,7 @@ public class SceneActions : MonoBehaviour
 
     private IEnumerator StartLoad(string sceneToLoad)
     {
+        Time.timeScale = 1f;
         _loadingScreenGo.SetActive(true);
         var slider = _loadingScreenGo.GetComponentInChildren<Slider>();
         yield return StartCoroutine(FadeLoadingScreen(1, 1));

@@ -43,7 +43,7 @@ public class PlayerWeaponController : MonoBehaviour
         {
             _shootingPoint = _player.ShootingPoint.position;
             
-            var projectile = Instantiate(bullet, _shootingPoint, transform.rotation);          
+            var projectile = Instantiate(bullet, _shootingPoint, transform.rotation);
             projectile.SetUp(bulletSpeed,bulletDamage,bulletLifespan,_shootingPoint,transform.forward);
             _player.Ammo.ConsumeAmmo(1f);
             _lastProjectileShot = weaponFireRate;
